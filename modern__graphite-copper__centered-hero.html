@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jimmy Smith | Charleston Realtor</title>
+    <meta name="description" content="Charleston real estate expert.">
+    <meta property="og:title" content="Jimmy Smith | Charleston Realtor">
+    <meta property="og:description" content="Charleston real estate expert.">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+/* withNotable themed renderer — Modern / Centered Hero · Neighborhood Grid / Graphite & Copper (Warm Monochrome) */
+
+:root {
+  --color-bg: #FAFAF9;
+  --color-surface: #F1F1EF;
+  --color-ink: #141414;
+  --color-ink-muted: #6B6A66;
+  --color-primary: #1A1A19;
+  --color-on-primary: #FAFAF9;
+  --color-accent: #B07A3D;
+  --color-on-accent: #1A1A19;
+  --color-border: #E4E1D8;
+  --font-display: 'Manrope', 'Segoe UI', -apple-system, sans-serif;
+  --font-body: 'Manrope', 'Segoe UI', -apple-system, sans-serif;
+  --space-xs: 0.5rem;
+  --space-sm: 0.875rem;
+  --space-md: 1.25rem;
+  --space-lg: 2.25rem;
+  --space-xl: 4rem;
+  --space-xxl: 6rem;
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 6px;
+  --line-height: 1.55;
+  --section-pad-y: 4.25rem;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; font-size: 16px; }
+body {
+    font-family: var(--font-body);
+    color: var(--color-ink);
+    background-color: var(--color-bg);
+    line-height: var(--line-height);
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; height: auto; display: block; }
+em { font-style: italic; color: var(--color-accent); }
+
+.section-inner { max-width: 1100px; margin: 0 auto; padding: 0 var(--space-md); }
+section { padding: var(--section-pad-y) 0; }
+.section-label { font-size: 0.78rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.14em; color: var(--color-accent); margin-bottom: var(--space-sm); }
+.section-title { font-family: var(--font-display); font-size: clamp(1.8rem, 3.5vw, 2.8rem); font-weight: 400; line-height: 1.15; color: var(--color-ink); margin-bottom: var(--space-lg); }
+
+/* Nav */
+nav { position: fixed; top: 0; width: 100%; z-index: 100; background: color-mix(in srgb, var(--color-surface) 92%, transparent); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid color-mix(in srgb, var(--color-accent) 15%, transparent); transition: all 0.4s ease; }
+nav.scrolled { box-shadow: 0 4px 30px color-mix(in srgb, var(--color-ink) 6%, transparent); }
+.nav-inner { max-width: 1200px; margin: 0 auto; padding: var(--space-sm) var(--space-md); display: flex; justify-content: space-between; align-items: center; }
+.nav-brand { font-family: var(--font-display); font-size: 1.4rem; font-weight: 600; color: var(--color-ink); letter-spacing: 0.02em; }
+.nav-brand span { color: var(--color-accent); font-weight: 400; }
+.nav-links { display: flex; list-style: none; gap: 1.8rem; align-items: center; }
+.nav-links a { font-size: 0.8rem; font-weight: 500; color: var(--color-ink-muted); text-transform: uppercase; letter-spacing: 0.12em; transition: color 0.3s ease; }
+.nav-links a:hover { color: var(--color-ink); }
+.nav-listings { color: var(--color-accent) !important; font-weight: 600 !important; }
+.nav-cta { background: var(--color-primary) !important; color: var(--color-on-primary) !important; padding: 0.6rem 1.4rem; border-radius: var(--radius-sm); }
+.nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: var(--space-xs); }
+.nav-toggle span { display: block; width: 24px; height: 2px; background: var(--color-ink); margin: 5px 0; transition: 0.3s; }
+
+/* About */
+.about-grid { display: grid; grid-template-columns: 1.6fr 1fr; gap: var(--space-lg); align-items: start; }
+.about-text { font-size: 1.05rem; color: var(--color-ink-muted); }
+.about-text p { margin-bottom: var(--space-sm); }
+.about-stats { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-sm); }
+.stat-card { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: var(--space-md); text-align: center; }
+.stat-value { font-family: var(--font-display); font-size: 2.4rem; color: var(--color-accent); }
+.stat-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--color-ink-muted); }
+
+/* Specialties */
+.specialties { background: var(--color-surface); }
+.specialties-content { font-size: 1.05rem; color: var(--color-ink-muted); max-width: 760px; }
+.specialties-content p { margin-bottom: var(--space-sm); }
+
+/* FAQ */
+.faq-item { border-bottom: 1px solid var(--color-border); padding: var(--space-md) 0; cursor: pointer; }
+.faq-question { font-family: var(--font-display); font-size: 1.3rem; font-weight: 500; color: var(--color-ink); }
+.faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.4s ease; }
+.faq-item.open .faq-answer { max-height: 400px; padding-top: var(--space-sm); }
+.faq-answer p { color: var(--color-ink-muted); }
+
+/* Testimonials */
+.testimonials { background: var(--color-surface); }
+.testimonial-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--space-md); }
+.testimonial-card { background: var(--color-bg); border: 1px solid var(--color-border); border-left: 3px solid var(--color-accent); border-radius: var(--radius-md); padding: var(--space-md); }
+.testimonial-card blockquote { font-family: var(--font-display); font-size: 1.2rem; font-style: italic; color: var(--color-ink); margin-bottom: var(--space-sm); }
+.testimonial-card cite { font-size: 0.85rem; color: var(--color-ink-muted); font-style: normal; }
+
+/* Contact */
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-lg); }
+.contact-info h3, .contact-cta h3 { font-family: var(--font-display); font-size: 1.5rem; color: var(--color-ink); margin-bottom: var(--space-sm); }
+.contact-detail { margin-bottom: var(--space-sm); }
+.detail-label { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--color-ink-muted); }
+.detail-value { color: var(--color-ink); }
+.contact-profiles { margin-top: var(--space-md); }
+.profile-links { display: flex; flex-wrap: wrap; gap: var(--space-xs); margin-top: var(--space-xs); }
+.profile-link { font-size: 0.8rem; padding: 0.3rem 0.8rem; border: 1px solid var(--color-border); border-radius: var(--radius-sm); color: var(--color-ink-muted); transition: all 0.3s ease; }
+.profile-link:hover { border-color: var(--color-accent); color: var(--color-accent); }
+.contact-cta { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: var(--space-lg); }
+.cta-copy { color: var(--color-ink-muted); }
+.btn-primary { display: inline-block; background: var(--color-primary); color: var(--color-on-primary); padding: 0.8rem 1.6rem; border-radius: var(--radius-sm); font-size: 0.85rem; font-weight: 600; letter-spacing: 0.04em; transition: opacity 0.3s ease; }
+.btn-primary:hover { opacity: 0.9; }
+.contact-cta-primary { margin-top: var(--space-md); }
+.contact-listings { margin-top: var(--space-sm); }
+
+/* Article / neighborhood / blog pages */
+.article-header { padding: 9rem var(--space-md) var(--space-lg); background: linear-gradient(165deg, var(--color-bg) 0%, var(--color-surface) 60%, color-mix(in srgb, var(--color-accent) 10%, transparent) 100%); border-bottom: 1px solid color-mix(in srgb, var(--color-accent) 25%, transparent); }
+.article-header-inner { max-width: 760px; margin: 0 auto; }
+.article-header .meta-line { font-size: 0.78rem; color: var(--color-ink-muted); margin-bottom: var(--space-sm); display: flex; gap: var(--space-sm); }
+.article-header h1 { font-family: var(--font-display); font-size: clamp(1.9rem, 4vw, 2.8rem); font-weight: 400; line-height: 1.15; color: var(--color-ink); }
+.article-lede { margin-top: var(--space-sm); font-size: 1.1rem; color: var(--color-ink-muted); }
+.blog-card-category { font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; color: var(--color-accent); background: color-mix(in srgb, var(--color-accent) 10%, transparent); padding: 0.25rem 0.7rem; border-radius: var(--radius-sm); }
+.article-body { max-width: 760px; margin: 0 auto; padding: var(--space-lg) var(--space-md) var(--space-xl); }
+.article-body p { margin-bottom: var(--space-md); font-size: 1.05rem; color: var(--color-ink); }
+.article-body h2 { font-family: var(--font-display); font-size: 1.8rem; font-weight: 500; color: var(--color-ink); margin: var(--space-lg) 0 var(--space-sm); }
+.article-body h3 { font-family: var(--font-display); font-size: 1.35rem; font-weight: 500; color: var(--color-ink); margin: var(--space-md) 0 var(--space-xs); }
+.article-body ul, .article-body ol { margin: 0 0 var(--space-md) var(--space-md); color: var(--color-ink); }
+.article-body blockquote { border-left: 3px solid var(--color-accent); padding: var(--space-sm) var(--space-md); margin: var(--space-md) 0; font-family: var(--font-display); font-style: italic; color: var(--color-ink-muted); background: var(--color-surface); border-radius: 0 var(--radius-md) var(--radius-md) 0; }
+.article-body a { color: var(--color-accent); text-decoration: underline; }
+.neighborhood-cta { margin-top: var(--space-xl); padding: var(--space-lg); background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-lg); text-align: center; }
+.neighborhood-cta h3 { font-family: var(--font-display); font-size: 1.6rem; color: var(--color-ink); margin-bottom: var(--space-xs); }
+.neighborhood-cta p { color: var(--color-ink-muted); margin-bottom: var(--space-md); }
+
+/* Blog index */
+.blog-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: var(--space-md); }
+.blog-card { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-md); overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+.blog-card:hover { transform: translateY(-3px); box-shadow: 0 10px 30px color-mix(in srgb, var(--color-ink) 8%, transparent); }
+.blog-card-body { padding: var(--space-md); }
+.blog-card-meta { display: flex; gap: var(--space-sm); align-items: center; margin-bottom: var(--space-sm); }
+.blog-card-date { font-size: 0.78rem; color: var(--color-ink-muted); }
+.blog-card-title { font-family: var(--font-display); font-size: 1.4rem; font-weight: 500; color: var(--color-ink); margin-bottom: var(--space-xs); }
+.blog-card-excerpt { font-size: 0.95rem; color: var(--color-ink-muted); }
+.blog-card-read { display: inline-block; margin-top: var(--space-sm); font-size: 0.8rem; font-weight: 600; color: var(--color-accent); text-transform: uppercase; letter-spacing: 0.08em; }
+.blog-empty { text-align: center; color: var(--color-ink-muted); padding: var(--space-xl) 0; }
+
+/* Footer */
+footer { background: var(--color-primary); color: color-mix(in srgb, var(--color-on-primary) 70%, transparent); padding: var(--space-lg) var(--space-md); text-align: center; }
+.footer-brand { font-family: var(--font-display); font-size: 1.3rem; color: var(--color-on-primary); margin-bottom: var(--space-xs); }
+footer p { font-size: 0.82rem; }
+.footer-disclaimer { font-style: italic; margin-top: 0.4rem; }
+.footer-links { display: flex; justify-content: center; gap: var(--space-md); margin-top: var(--space-md); flex-wrap: wrap; }
+.footer-links a { font-size: 0.78rem; color: color-mix(in srgb, var(--color-on-primary) 55%, transparent); text-transform: uppercase; letter-spacing: 0.1em; transition: color 0.3s ease; }
+.footer-links a:hover { color: var(--color-accent); }
+
+/* IDX strip (shared, under hero, both layouts) */
+.idx-strip { background: var(--color-primary); padding: var(--space-md) var(--space-md); }
+.idx-strip-inner { max-width: 1100px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: var(--space-md); align-items: center; justify-content: space-between; }
+.idx-strip-eyebrow { font-size: 0.78rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.14em; color: var(--color-accent); margin-bottom: 0.25rem; }
+.idx-strip-title { font-family: var(--font-display); font-size: clamp(1.3rem, 2.4vw, 1.8rem); font-weight: 400; color: var(--color-on-primary); }
+.idx-strip-cta { background: var(--color-accent); color: var(--color-on-accent); padding: 0.85rem 1.6rem; border-radius: var(--radius-sm); font-size: 0.88rem; font-weight: 600; letter-spacing: 0.04em; transition: opacity 0.3s ease; white-space: nowrap; }
+.idx-strip-cta:hover { opacity: 0.9; }
+@media (max-width: 600px) {
+    .idx-strip-inner { flex-direction: column; align-items: flex-start; }
+    .idx-strip-cta { width: 100%; text-align: center; }
+}
+
+/* Awards / designations (folded into About) */
+.awards-block { margin-top: var(--space-lg); padding-top: var(--space-md); border-top: 1px solid var(--color-border); }
+.awards-label { font-size: 0.78rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; color: var(--color-ink-muted); margin-bottom: var(--space-sm); }
+.awards-chips { display: flex; flex-wrap: wrap; gap: var(--space-xs); list-style: none; padding: 0; }
+.award-chip { font-size: 0.82rem; font-weight: 500; color: var(--color-ink); background: color-mix(in srgb, var(--color-accent) 10%, transparent); border: 1px solid color-mix(in srgb, var(--color-accent) 35%, transparent); padding: 0.35rem 0.85rem; border-radius: var(--radius-sm); letter-spacing: 0.02em; }
+
+/* Animation */
+.fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.8s ease, transform 0.8s ease; }
+.fade-in.visible { opacity: 1; transform: translateY(0); }
+
+/* Responsive */
+@media (max-width: 860px) {
+    .about-grid, .contact-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 768px) {
+    .nav-links { display: none; }
+    .nav-links.mobile-open { display: flex; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: var(--color-surface); padding: var(--space-md); gap: var(--space-sm); border-bottom: 1px solid var(--color-border); }
+    .nav-toggle { display: block; }
+}
+
+.hero-centered { padding-top: 9rem; background: radial-gradient(ellipse at top, color-mix(in srgb, var(--color-accent) 10%, transparent) 0%, var(--color-bg) 60%); text-align: center; }
+.hero-centered .hero-inner { max-width: 820px; margin: 0 auto; padding: var(--space-xl) var(--space-md) var(--space-lg); }
+.hero-centered .photo-frame { width: 160px; height: 160px; margin: 0 auto var(--space-lg); border-radius: 50%; overflow: hidden; border: 3px solid var(--color-surface); box-shadow: 0 8px 30px color-mix(in srgb, var(--color-accent) 25%, transparent); }
+.hero-centered .photo-frame img { width: 100%; height: 100%; object-fit: cover; }
+.hero-centered .photo-placeholder { width: 100%; height: 100%; background: var(--color-primary); color: var(--color-on-primary); display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-size: 2.5rem; }
+.hero-centered .hero-label { font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.14em; color: var(--color-accent); margin-bottom: var(--space-md); }
+.hero-centered .hero-title { font-family: var(--font-display); font-size: clamp(2.6rem, 6vw, 4.4rem); font-weight: 400; line-height: 1.05; color: var(--color-ink); margin-bottom: var(--space-md); }
+.hero-centered .hero-subtitle { font-size: 1.2rem; color: var(--color-ink-muted); max-width: 50ch; margin: 0 auto; }
+.nb-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: var(--space-md); }
+.nb-tile { display: flex; flex-direction: column; background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: var(--space-lg); transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; }
+.nb-tile:hover { transform: translateY(-4px); border-color: var(--color-accent); box-shadow: 0 12px 34px color-mix(in srgb, var(--color-accent) 18%, transparent); }
+.nb-tile-name { font-family: var(--font-display); font-size: 1.5rem; font-weight: 500; color: var(--color-ink); margin-bottom: var(--space-xs); }
+.nb-tile-blurb { font-size: 0.95rem; color: var(--color-ink-muted); flex: 1; margin-bottom: var(--space-md); }
+.nb-tile-explore { font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--color-accent); }
+</style>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "RealEstateAgent",
+  "name": "Jimmy Smith",
+  "url": "https://withnotable.github.io/jimmy-smith-site",
+  "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=760&fit=crop",
+  "telephone": "(843) 555-0100",
+  "email": "jimmy@example.com",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Coastal Realty"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Charleston",
+    "addressRegion": "SC"
+  },
+  "areaServed": [
+    {
+      "@type": "Place",
+      "name": "Old Village"
+    },
+    {
+      "@type": "Place",
+      "name": "South of Broad"
+    },
+    {
+      "@type": "Place",
+      "name": "Sullivan's Island"
+    },
+    {
+      "@type": "Place",
+      "name": "Isle of Palms"
+    }
+  ],
+  "sameAs": [
+    "https://zillow.com/jimmy",
+    "#"
+  ]
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What areas do you serve?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Charleston and the surrounding islands, from downtown to the beaches."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you help first-time buyers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — I walk first-time buyers through every step."
+      }
+    }
+  ]
+}
+    </script>
+</head>
+<body>
+    <nav id="navbar">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-brand">Jimmy Smith <span>·</span> Realtor</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="index.html#neighborhoods">Neighborhoods</a></li>
+                <li><a href="blog/index.html">Blog</a></li>
+                <li><a href="https://idx.example.com/jimmy" target="_blank" rel="noopener noreferrer" class="nav-listings">View Listings</a></li>
+                <li><a href="contact.html" class="nav-cta">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+
+    <section class="hero hero-centered" id="home">
+        <div class="hero-inner">
+            <div class="hero-photo"><div class="photo-frame"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&amp;h=760&amp;fit=crop" alt="Jimmy Smith, Realtor with Coastal Realty" width="240" height="240" loading="eager"></div></div>
+            <div class="hero-label">Coastal Realty · Charleston, SC</div>
+            <h1 class="hero-title">Your Guide to Lowcountry Living in Charleston</h1>
+            <p class="hero-subtitle">Helping families find their place along the Carolina coast — with patience, candor, and a deep love for these neighborhoods.</p>
+        </div>
+    </section>
+
+    <section class="idx-strip" aria-label="View Listings">
+        <div class="idx-strip-inner">
+            <div class="idx-strip-copy">
+                <div class="idx-strip-eyebrow">Search Every Listing</div>
+                <h2 class="idx-strip-title">See what's on the market in Charleston</h2>
+            </div>
+            <a class="idx-strip-cta" href="https://idx.example.com/jimmy" target="_blank" rel="noopener noreferrer">View Listings →</a>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="section-inner">
+            <div class="section-label">About Jimmy</div>
+            <h2 class="section-title">Your Local <em>Real Estate</em> Expert</h2>
+            <div class="about-grid">
+                <div class="about-text fade-in"><p>With over a decade guiding buyers and sellers across the Lowcountry, I bring local knowledge and a steady hand to every transaction.</p></div>
+                <div class="about-stats fade-in"><div class="stat-card"><div class="stat-value">4</div><div class="stat-label">Focus Markets</div></div>
+                <div class="stat-card"><div class="stat-value">12+</div><div class="stat-label">Years Experience</div></div></div>
+            </div>
+                <div class="awards-block fade-in" aria-label="Credentials">
+                    <div class="awards-label">Credentials &amp; Designations</div>
+                    <ul class="awards-chips"><li class="award-chip">SRES</li><li class="award-chip">Top Producer</li><li class="award-chip">Realtor of Distinction</li></ul>
+                </div>
+        </div>
+    </section>
+
+    <section class="specialties">
+        <div class="section-inner">
+            <div class="section-label">Expertise</div>
+            <h2 class="section-title">How I Can <em>Help You</em></h2>
+            <div class="specialties-content fade-in"><p>Luxury coastal homes, historic downtown properties, and waterfront estates.</p></div>
+        </div>
+    </section>
+
+    <section class="neighborhoods" id="neighborhoods">
+        <div class="section-inner">
+            <div class="section-label">Local Expertise</div>
+            <h2 class="section-title">Neighborhoods I <em>Cover</em></h2>
+            <div class="nb-grid">
+                <a class="nb-tile fade-in" href="neighborhoods/old-village.html">
+                    <h3 class="nb-tile-name">Old Village</h3>
+                    <p class="nb-tile-blurb">Old Village is known for its waterfront character, historic streets, and easy access to the marsh and the harbor.</p>
+                    <span class="nb-tile-explore">Explore →</span>
+                </a>
+                <a class="nb-tile fade-in" href="neighborhoods/south-of-broad.html">
+                    <h3 class="nb-tile-name">South of Broad</h3>
+                    <p class="nb-tile-blurb">South of Broad is known for its waterfront character, historic streets, and easy access to the marsh and the harbor.</p>
+                    <span class="nb-tile-explore">Explore →</span>
+                </a>
+                <a class="nb-tile fade-in" href="neighborhoods/sullivans-island.html">
+                    <h3 class="nb-tile-name">Sullivan's Island</h3>
+                    <p class="nb-tile-blurb">Sullivan's Island is known for its waterfront character, historic streets, and easy access to the marsh and the harbor.</p>
+                    <span class="nb-tile-explore">Explore →</span>
+                </a>
+                <a class="nb-tile fade-in" href="neighborhoods/isle-of-palms.html">
+                    <h3 class="nb-tile-name">Isle of Palms</h3>
+                    <p class="nb-tile-blurb">Isle of Palms is known for its waterfront character, historic streets, and easy access to the marsh and the harbor.</p>
+                    <span class="nb-tile-explore">Explore →</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq" id="faq">
+        <div class="section-inner">
+            <div class="section-label">Common Questions</div>
+            <h2 class="section-title">What Buyers &amp; Sellers <em>Ask Me</em></h2>
+                <div class="faq-item open">
+                    <h3 class="faq-question">What areas do you serve?</h3>
+                    <div class="faq-answer"><p>Charleston and the surrounding islands, from downtown to the beaches.</p></div>
+                </div>
+                <div class="faq-item">
+                    <h3 class="faq-question">Do you help first-time buyers?</h3>
+                    <div class="faq-answer"><p>Yes — I walk first-time buyers through every step.</p></div>
+                </div>
+        </div>
+    </section>
+
+    <section class="testimonials" id="testimonials">
+        <div class="section-inner">
+            <div class="section-label">Client Reviews</div>
+            <h2 class="section-title">What Clients Say <em>About Working With Me</em></h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-card fade-in">
+                    <blockquote>&ldquo;Jimmy made our first home purchase feel effortless and genuinely fun.&rdquo;</blockquote>
+                    <cite>— Sarah M., Buyer, Old Village</cite>
+                </div>
+                <div class="testimonial-card fade-in">
+                    <blockquote>&ldquo;Sold our house above asking in a week. Could not recommend more highly.&rdquo;</blockquote>
+                    <cite>— The Delgados, Sellers</cite>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="section-inner">
+            <div class="section-label">Get In Touch</div>
+            <h2 class="section-title">Let's Talk About <em>Your Next Move</em></h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Jimmy Smith, Realtor</h3>
+                    <div class="contact-detail"><div class="detail-label">Phone</div><div class="detail-value"><a href="tel:(843) 555-0100">(843) 555-0100</a></div></div>
+                    <div class="contact-detail"><div class="detail-label">Email</div><div class="detail-value"><a href="mailto:jimmy@example.com">jimmy@example.com</a></div></div>
+                    <div class="contact-detail"><div class="detail-label">Brokerage</div><div class="detail-value">Coastal Realty<br>Charleston, SC</div></div>
+                    <div class="contact-profiles"><div class="detail-label">Find Jimmy Smith Online</div><div class="profile-links"><a href="https://zillow.com/jimmy" target="_blank" rel="noopener noreferrer" class="profile-link">Zillow</a><a href="#" target="_blank" rel="noopener noreferrer" class="profile-link">Realtor.com</a></div></div>
+                </div>
+                <div class="contact-cta">
+                    <h3>Ready to get started?</h3>
+                    <div class="cta-copy"><p>Reach out anytime — I respond personally.</p></div>
+                    <p class="contact-cta-primary"><a href="tel:(843) 555-0100" class="btn-primary">Call Jimmy · (843) 555-0100</a></p>
+                    <p class="contact-listings"><a href="https://idx.example.com/jimmy" target="_blank" rel="noopener noreferrer" class="btn-primary">View Listings</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-brand">Jimmy Smith · Coastal Realty</div>
+        <p>Equal Housing Opportunity</p>
+        <p class="footer-disclaimer">Content on this site is created with AI assistance and reviewed by Jimmy Smith.</p>
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="blog/index.html">Blog</a>
+            <a href="contact.html">Contact</a>
+            <a href="https://withnotable.ai" target="_blank" rel="noopener noreferrer">Powered by withNotable</a>
+        </div>
+    </footer>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (nav) nav.classList.toggle('scrolled', window.scrollY > 50);
+        });
+        const navToggle = document.querySelector('.nav-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        if (navToggle && navLinks) {
+            navToggle.addEventListener('click', () => { navLinks.classList.toggle('mobile-open'); navToggle.classList.toggle('active'); });
+        }
+        document.querySelectorAll('.faq-question').forEach(q => {
+            q.addEventListener('click', () => {
+                const item = q.parentElement;
+                const wasOpen = item.classList.contains('open');
+                document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+                if (!wasOpen) item.classList.add('open');
+            });
+        });
+    </script>
+</body>
+</html>
