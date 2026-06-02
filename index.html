@@ -1,1 +1,683 @@
-<!doctype html><meta charset="utf-8"><title>withNotable themed previews</title><style>body{font:16px/1.6 system-ui;max-width:760px;margin:3rem auto;padding:0 1rem}h1{font-size:1.4rem}h2{margin-top:2rem;font-size:1.1rem}ul{columns:2}a{color:#0a5}</style><h1>withNotable themed previews — 12 compositions</h1><section><h2>Editorial</h2><ul><li><a href="editorial__warm-luxury__split-hero.html">Warm Luxury (Earth & Gold) · Split Hero · Stacked Neighborhoods</a></li><li><a href="editorial__warm-luxury__centered-hero.html">Warm Luxury (Earth & Gold) · Centered Hero · Neighborhood Grid</a></li><li><a href="editorial__navy-classic__split-hero.html">Navy & Gold (Classic) · Split Hero · Stacked Neighborhoods</a></li><li><a href="editorial__navy-classic__centered-hero.html">Navy & Gold (Classic) · Centered Hero · Neighborhood Grid</a></li></ul></section><section><h2>Modern</h2><ul><li><a href="modern__graphite-copper__split-hero.html">Graphite & Copper (Warm Monochrome) · Split Hero · Stacked Neighborhoods</a></li><li><a href="modern__graphite-copper__centered-hero.html">Graphite & Copper (Warm Monochrome) · Centered Hero · Neighborhood Grid</a></li><li><a href="modern__chalk-slate__split-hero.html">Chalk & Slate (Cool Gallery) · Split Hero · Stacked Neighborhoods</a></li><li><a href="modern__chalk-slate__centered-hero.html">Chalk & Slate (Cool Gallery) · Centered Hero · Neighborhood Grid</a></li></ul></section><section><h2>Coastal</h2><ul><li><a href="coastal__seafoam-sand__split-hero.html">Seafoam & Sand (Warm Coastal) · Split Hero · Stacked Neighborhoods</a></li><li><a href="coastal__seafoam-sand__centered-hero.html">Seafoam & Sand (Warm Coastal) · Centered Hero · Neighborhood Grid</a></li><li><a href="coastal__dune-sunset__split-hero.html">Dune & Sunset (Warm Coastal) · Split Hero · Stacked Neighborhoods</a></li><li><a href="coastal__dune-sunset__centered-hero.html">Dune & Sunset (Warm Coastal) · Centered Hero · Neighborhood Grid</a></li></ul></section>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>withNotable — Website Design Catalog</title>
+<meta name="description" content="Explore withNotable's website design catalog for real estate agents — three themes, two layouts, two palettes per theme. Twelve distinct designs.">
+<meta property="og:title" content="withNotable — Website Design Catalog">
+<meta property="og:description" content="Three themes, two layouts, two palettes per theme. Twelve distinct designs for real estate agents and brokerages.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  /* ============================================================
+     Notable brand tokens — ink/canvas/sky palette, premium feel.
+     ============================================================ */
+  :root {
+    --canvas: #FAF8F4;          /* warm off-white */
+    --canvas-soft: #F2EFE8;
+    --paper: #FFFFFF;
+    --ink: #1A1614;             /* near-black with warm undertone */
+    --ink-soft: #4A4339;
+    --ink-mute: #8A857C;
+    --sky: #4A6B7A;             /* deep blue-gray accent */
+    --gold: #B8956A;            /* warm gold */
+    --line: rgba(26,22,20,.08);
+    --line-strong: rgba(26,22,20,.16);
+    --shadow-sm: 0 1px 2px rgba(26,22,20,.04), 0 1px 1px rgba(26,22,20,.03);
+    --shadow-md: 0 10px 30px rgba(26,22,20,.08), 0 4px 8px rgba(26,22,20,.04);
+    --shadow-lg: 0 24px 60px rgba(26,22,20,.12), 0 8px 16px rgba(26,22,20,.06);
+    --serif: 'Fraunces', Georgia, 'Times New Roman', serif;
+    --sans: 'Source Sans 3', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--canvas);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-weight: 300;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  a { color: inherit; text-decoration: none; }
+
+  /* ============================================================
+     Header / brand frame
+     ============================================================ */
+  .brandbar {
+    background: var(--ink);
+    color: var(--canvas);
+    padding: 18px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .brandbar .mark {
+    font-family: var(--serif);
+    font-size: 21px;
+    font-weight: 500;
+    letter-spacing: .005em;
+  }
+  .brandbar .mark b { font-weight: 600; }
+  .brandbar .mark .div { color: var(--gold); margin: 0 8px; opacity: .65; }
+  .brandbar .mark .sub { font-weight: 300; opacity: .8; font-size: 14px; }
+  .brandbar .meta {
+    font-family: var(--sans);
+    font-size: 11px;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: rgba(250,248,244,.5);
+  }
+
+  /* ============================================================
+     Hero / intro
+     ============================================================ */
+  .hero {
+    padding: 88px 32px 64px;
+    text-align: center;
+    background: linear-gradient(180deg, var(--canvas) 0%, var(--canvas-soft) 100%);
+    border-bottom: 1px solid var(--line);
+  }
+  .hero .eyebrow {
+    font-family: var(--sans);
+    font-size: 11px;
+    letter-spacing: .24em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 24px;
+    font-weight: 500;
+  }
+  .hero h1 {
+    font-family: var(--serif);
+    font-size: clamp(40px, 5.6vw, 64px);
+    font-weight: 400;
+    line-height: 1.05;
+    letter-spacing: -.01em;
+    margin-bottom: 24px;
+    color: var(--ink);
+  }
+  .hero h1 em {
+    font-style: italic;
+    color: var(--sky);
+    font-weight: 400;
+  }
+  .hero p.lead {
+    font-family: var(--sans);
+    font-size: 18px;
+    line-height: 1.7;
+    color: var(--ink-soft);
+    max-width: 56ch;
+    margin: 0 auto 36px;
+    font-weight: 300;
+  }
+  .hero .stats {
+    display: inline-flex;
+    gap: 56px;
+    margin-top: 8px;
+    padding: 24px 48px;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    box-shadow: var(--shadow-sm);
+  }
+  .hero .stat .v {
+    font-family: var(--serif);
+    font-size: 32px;
+    font-weight: 500;
+    color: var(--ink);
+    line-height: 1;
+  }
+  .hero .stat .l {
+    font-family: var(--sans);
+    font-size: 10px;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--ink-mute);
+    margin-top: 8px;
+    font-weight: 500;
+  }
+  .hero .stat .x {
+    font-family: var(--serif);
+    font-size: 20px;
+    color: var(--ink-mute);
+    align-self: center;
+    font-style: italic;
+  }
+
+  /* ============================================================
+     Theme section
+     ============================================================ */
+  .theme-section {
+    padding: 80px 32px 24px;
+    max-width: 1480px;
+    margin: 0 auto;
+  }
+  .theme-header {
+    display: flex;
+    align-items: baseline;
+    gap: 24px;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--line);
+  }
+  .theme-header .label {
+    font-family: var(--sans);
+    font-size: 11px;
+    letter-spacing: .24em;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 500;
+  }
+  .theme-header h2 {
+    font-family: var(--serif);
+    font-size: clamp(28px, 3.4vw, 40px);
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: -.005em;
+    color: var(--ink);
+  }
+  .theme-header h2 em {
+    font-style: italic;
+    color: var(--sky);
+  }
+  .theme-header .blurb {
+    font-family: var(--sans);
+    font-size: 14px;
+    color: var(--ink-mute);
+    flex: 1 1 280px;
+    max-width: 520px;
+    margin-left: auto;
+    text-align: right;
+    font-weight: 300;
+    line-height: 1.6;
+  }
+
+  /* ============================================================
+     Gallery grid — 4 cards per theme (2 palettes × 2 layouts)
+     ============================================================ */
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 28px;
+    margin-top: 36px;
+  }
+
+  .card {
+    display: block;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: transform .35s cubic-bezier(.2,.7,.2,1), box-shadow .35s, border-color .35s;
+    position: relative;
+    cursor: pointer;
+  }
+  .card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--line-strong);
+  }
+  .card:hover .card-meta .open {
+    color: var(--gold);
+    transform: translateX(4px);
+  }
+
+  /* Preview frame — live iframe of the actual rendered design */
+  .preview-frame {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    background: var(--canvas-soft);
+    border-bottom: 1px solid var(--line);
+  }
+  .preview-frame iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* render the iframe at 1280×960 then scale down so we see a full-page composition */
+    width: 1280px;
+    height: 960px;
+    transform-origin: top left;
+    transform: scale(0.265);
+    border: 0;
+    pointer-events: none;
+    background: #fff;
+  }
+  /* responsive scale: as the card narrows, scale smaller */
+  @media (max-width: 1200px) {
+    .preview-frame iframe { transform: scale(0.32); width: 1280px; height: 960px; }
+  }
+  /* darkening overlay on hover for legibility of the chip */
+  .preview-frame::after {
+    content: "";
+    position: absolute; inset: 0;
+    background: linear-gradient(180deg, rgba(26,22,20,0) 0%, rgba(26,22,20,0) 60%, rgba(26,22,20,.08) 100%);
+    pointer-events: none;
+    transition: background .3s;
+  }
+  .card:hover .preview-frame::after {
+    background: linear-gradient(180deg, rgba(26,22,20,0) 0%, rgba(26,22,20,0) 40%, rgba(26,22,20,.14) 100%);
+  }
+
+  /* Layout chip in the corner of the preview */
+  .layout-chip {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    z-index: 2;
+    font-family: var(--sans);
+    font-size: 10px;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    background: rgba(250,248,244,.94);
+    color: var(--ink);
+    padding: 7px 12px;
+    border-radius: 3px;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    box-shadow: 0 2px 6px rgba(26,22,20,.06);
+    font-weight: 500;
+  }
+
+  /* Card meta — name + palette + open arrow */
+  .card-meta {
+    padding: 22px 24px 24px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 12px 16px;
+    align-items: end;
+  }
+  .card-meta .palette-name {
+    font-family: var(--serif);
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--ink);
+    line-height: 1.2;
+    letter-spacing: -.005em;
+  }
+  .card-meta .palette-name .sub {
+    display: block;
+    font-family: var(--sans);
+    font-size: 11px;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--ink-mute);
+    font-weight: 500;
+    margin-top: 6px;
+  }
+  .card-meta .open {
+    font-family: var(--sans);
+    font-size: 11px;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--ink-mute);
+    font-weight: 500;
+    transition: color .25s, transform .25s;
+    white-space: nowrap;
+    align-self: end;
+    padding-bottom: 2px;
+  }
+
+  /* Palette swatches under the name */
+  .swatches {
+    grid-column: 1 / -1;
+    display: flex;
+    gap: 6px;
+    margin-top: 4px;
+  }
+  .sw {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    border: 1px solid var(--line-strong);
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,.4);
+  }
+
+  /* ============================================================
+     Footer
+     ============================================================ */
+  footer {
+    margin-top: 96px;
+    padding: 56px 32px 48px;
+    background: var(--ink);
+    color: rgba(250,248,244,.7);
+    text-align: center;
+  }
+  footer .fmark {
+    font-family: var(--serif);
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--canvas);
+    margin-bottom: 10px;
+    letter-spacing: .005em;
+  }
+  footer .fmark b { font-weight: 600; }
+  footer p {
+    font-family: var(--sans);
+    font-size: 13px;
+    line-height: 1.8;
+    max-width: 52ch;
+    margin: 0 auto;
+    font-weight: 300;
+  }
+  footer .fline {
+    margin-top: 24px;
+    font-size: 11px;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: rgba(250,248,244,.4);
+    font-weight: 500;
+  }
+
+  /* ============================================================
+     Responsive tightening
+     ============================================================ */
+  @media (max-width: 720px) {
+    .hero { padding: 56px 24px 48px; }
+    .hero .stats { gap: 28px; padding: 18px 24px; flex-wrap: wrap; }
+    .theme-section { padding: 56px 24px 16px; }
+    .theme-header { flex-direction: column; align-items: flex-start; gap: 8px; }
+    .theme-header .blurb { text-align: left; margin-left: 0; }
+    .gallery { grid-template-columns: 1fr; gap: 20px; }
+    .preview-frame iframe { transform: scale(0.30); }
+    footer { padding: 40px 24px 32px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="brandbar">
+  <span class="mark">
+    with<b>Notable</b><span class="div">·</span><span class="sub">Website Design Catalog</span>
+  </span>
+  <span class="meta">For Real Estate Agents &amp; Brokerages</span>
+</header>
+
+<section class="hero">
+  <div class="eyebrow">The Catalog</div>
+  <h1>Twelve designs.<br>One <em>coherent</em> system.</h1>
+  <p class="lead">Three themes, two layouts, two palettes per theme — composed from a shared design system so every agent in a brokerage stays visually distinct. Click any design to explore the full site.</p>
+  <div class="stats">
+    <div class="stat"><div class="v">3</div><div class="l">Themes</div></div>
+    <div class="stat x">×</div>
+    <div class="stat"><div class="v">2</div><div class="l">Layouts</div></div>
+    <div class="stat x">×</div>
+    <div class="stat"><div class="v">2</div><div class="l">Palettes</div></div>
+    <div class="stat x">=</div>
+    <div class="stat"><div class="v">12</div><div class="l">Compositions</div></div>
+  </div>
+</section>
+
+<!-- ============================================================
+     EDITORIAL
+     ============================================================ -->
+<section class="theme-section">
+  <div class="theme-header">
+    <div>
+      <div class="label">Theme 01</div>
+      <h2><em>Editorial</em></h2>
+    </div>
+    <p class="blurb">A high-contrast serif treatment for agents who lead with prose and character. Cormorant Garamond paired with a clean humanist sans. Reads literary, considered, premium.</p>
+  </div>
+
+  <div class="gallery">
+
+    <a class="card" href="editorial__warm-luxury__split-hero.html">
+      <div class="preview-frame">
+        <span class="layout-chip">Split Hero</span>
+        <iframe src="editorial__warm-luxury__split-hero.html" loading="lazy" title="Editorial · Warm Luxury · Split Hero"></iframe>
+      </div>
+      <div class="card-meta">
+        <div class="palette-name">Warm Luxury<span class="sub">Earth &amp; Gold</span></div>
+        <div class="open">View →</div>
+        <div class="swatches">
+          <span class="sw" style="background:#F5F0EB"></span>
+          <span class="sw" style="background:#3D3530"></span>
+          <span class="sw" style="background:#B8956A"></span>
+          <span class="sw" style="background:#4A6B7A"></span>
+        </div>
+      </div>
+    </a>
+
+    <a class="card" href="editorial__warm-luxury__centered-hero.html">
+      <div class="preview-frame">
+        <span class="layout-chip">Centered Hero</span>
+        <iframe src="editorial__warm-luxury__centered-hero.html" loading="lazy" title="Editorial · Warm Luxury · Centered Hero"></iframe>
+      </div>
+      <div class="card-meta">
+        <div class="palette-name">Warm Luxury<span class="sub">Earth &amp; Gold</span></div>
+        <div class="open">View →</div>
+        <div class="swatches">
+          <span class="sw" style="background:#F5F0EB"></span>
+          <span class="sw" style="background:#3D3530"></span>
+          <span class="sw" style="background:#B8956A"></span>
+          <span class="sw" style="background:#4A6B7A"></span>
+        </div>
+      </div>
+    </a>
+
+    <a class="card" href="editorial__navy-classic__split-hero.html">
+      <div class="preview-frame">
+        <span class="layout-chip">Split Hero</span>
+        <iframe src="editorial__navy-classic__split-hero.html" loading="lazy" title="Editorial · Navy &amp; Gold · Split Hero"></iframe>
+      </div>
+      <div class="card-meta">
+        <div class="palette-name">Navy &amp; Gold<span class="sub">Classic</span></div>
+        <div class="open">View →</div>
+        <div class="swatches">
+          <span class="sw" style="background:#F4F6F8"></span>
+          <span class="sw" style="background:#1A365D"></span>
+          <span class="sw" style="background:#C6A961"></span>
+          <span class="sw" style="background:#14213D"></span>
+        </div>
+      </div>
+    </a>
+
+    <a class="card" href="editorial__navy-classic__centered-hero.html">
+      <div class="preview-frame">
+        <span class="layout-chip">Centered Hero</span>
+        <iframe src="editorial__navy-classic__centered-hero.html" loading="lazy" title="Editorial · Navy &amp; Gold · Centered Hero"></iframe>
+      </div>
+      <div class="card-meta">
+        <div class="palette-name">Navy &amp; Gold<span class="sub">Classic</span></div>
+        <div class="open">View →</div>
+        <div class="swatches">
+          <span class="sw" style="background:#F4F6F8"></span>
+          <span class="sw" style="background:#1A365D"></span>
+          <span class="sw" style="background:#C6A961"></span>
+          <span class="sw" style="background:#14213D"></span>
+        </div>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+<!-- ============================================================
+     MODERN
+     ============================================================ -->
+<section class="theme-section">
+  <div class="theme-header">
+    <div>
+      <div class="label">Theme 02</div>
+      <h2><em>Modern</em></h2>
+    </div>
+    <p class="blurb">A geometric grotesque for agents who lead with confidence and architecture. Manrope across the system — tight, even-stroke, large x-height — with a single sharp accent. Reads contemporary, premium, decisive.</p>
+  </div>
+
+  <div class="gallery">
+
+    <a class="card" href="modern__graphite-copper__split-hero.html">
+      <div class="preview-frame">
+        <span class="layout-chip">Split Hero</span>
+        <iframe src="modern__graphite-copper__split-hero.html" loading="lazy" title="Modern · Graphite &amp; Copper · Split Hero"></iframe>
+      </div>
+      <div class="card-meta">
+        <div class="palette-name">Graphite &amp; Copper<span class="sub">Warm Monochrome</span></div>
+        <div class="open">View →</div>
+        <div class="swatches">
+          <span class="sw" style="background:#FAFAF9"></span>
+          <span class="sw" style="background:#1A1A19"></span>
+          <span class="sw" style="background:#B07A3D"></span>
+          <span class="sw" style="background:#6B6A66"></span>
+        </div>
+      </div>
+    </a>
+
+    <a class="card" href="modern__graphite-copper__centered-hero.html">
+      <div class="preview-frame">
+        <span class="layout-chip">Centered Hero</span>
+        <iframe src="modern__graphite-copper__centered-hero.html" loading="lazy" title="Modern · Graphite &amp; Copper · Centered Hero"></iframe>
+      </div>
+      <div class="card-meta">
+        <div class="palette-name">Graphite &amp; Copper<span class="sub">Warm Monochrome</span></div>
+        <div class="open">View →</div>
+        <div class="swatches">
+          <span class="sw" style="background:#FAFAF9"></span>
+          <span class="sw" style="background:#1A1A19"></span>
+          <span class="sw" style="background:#B07A3D"></span>
+          <span class="sw" style="background:#6B6A66"></span>
+        </div>
+      </div>
+    </a>
+
+    <a class="card" href="modern__chalk-slate__split-hero.html">
+      <div class="preview-frame">
+        <span class="layout-chip">Split Hero</span>
+        <iframe src="modern__chalk-slate__split-hero.html" loading="lazy" title="Modern · Chalk &amp; Slate · Split Hero"></iframe>
+      </div>
+      <div class="card-meta">
+        <div class="palette-name">Chalk &amp; Slate<span class="sub">Cool Gallery</span></div>
+        <div class="open">View →</div>
+        <div class="swatches">
+          <span class="sw" style="background:#FCFCFD"></span>
+          <span class="sw" style="background:#14191D"></span>
+          <span class="sw" style="background:#3F5A6B"></span>
+          <span class="sw" style="background:#5C6670"></span>
+        </div>
+      </div>
+    </a>
+
+    <a class="card" href="modern__chalk-slate__centered-hero.html">
+      <div class="preview-frame">
+        <span class="layout-chip">Centered Hero</span>
+        <iframe src="modern__chalk-slate__centered-hero.html" loading="lazy" title="Modern · Chalk &amp; Slate · Centered Hero"></iframe>
+      </div>
+      <div class="card-meta">
+        <div class="palette-name">Chalk &amp; Slate<span class="sub">Cool Gallery</span></div>
+        <div class="open">View →</div>
+        <div class="swatches">
+          <span class="sw" style="background:#FCFCFD"></span>
+          <span class="sw" style="background:#14191D"></span>
+          <span class="sw" style="background:#3F5A6B"></span>
+          <span class="sw" style="background:#5C6670"></span>
+        </div>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+<!-- ============================================================
+     COASTAL
+     ============================================================ -->
+<section class="theme-section">
+  <div class="theme-header">
+    <div>
+      <div class="label">Theme 03</div>
+      <h2><em>Coastal</em></h2>
+    </div>
+    <p class="blurb">A soft humanist sans with airy spacing and rounded edges for agents whose markets — and whose clients — value warmth. Outfit across the system, relaxed density, generous radius. Reads approachable, warm, considered.</p>
+  </div>
+
+  <div class="gallery">
+
+    <a class="card" href="coastal__seafoam-sand__split-hero.html">
+      <div class="preview-frame">
+        <span class="layout-chip">Split Hero</span>
+        <iframe src="coastal__seafoam-sand__split-hero.html" loading="lazy" title="Coastal · Seafoam &amp; Sand · Split Hero"></iframe>
+      </div>
+      <div class="card-meta">
+        <div class="palette-name">Seafoam &amp; Sand<span class="sub">Cool Coastal</span></div>
+        <div class="open">View →</div>
+        <div class="swatches">
+          <span class="sw" style="background:#FBF9F4"></span>
+          <span class="sw" style="background:#2F6F66"></span>
+          <span class="sw" style="background:#5BA89A"></span>
+          <span class="sw" style="background:#6B8A91"></span>
+        </div>
+      </div>
+    </a>
+
+    <a class="card" href="coastal__seafoam-sand__centered-hero.html">
+      <div class="preview-frame">
+        <span class="layout-chip">Centered Hero</span>
+        <iframe src="coastal__seafoam-sand__centered-hero.html" loading="lazy" title="Coastal · Seafoam &amp; Sand · Centered Hero"></iframe>
+      </div>
+      <div class="card-meta">
+        <div class="palette-name">Seafoam &amp; Sand<span class="sub">Cool Coastal</span></div>
+        <div class="open">View →</div>
+        <div class="swatches">
+          <span class="sw" style="background:#FBF9F4"></span>
+          <span class="sw" style="background:#2F6F66"></span>
+          <span class="sw" style="background:#5BA89A"></span>
+          <span class="sw" style="background:#6B8A91"></span>
+        </div>
+      </div>
+    </a>
+
+    <a class="card" href="coastal__dune-sunset__split-hero.html">
+      <div class="preview-frame">
+        <span class="layout-chip">Split Hero</span>
+        <iframe src="coastal__dune-sunset__split-hero.html" loading="lazy" title="Coastal · Dune &amp; Sunset · Split Hero"></iframe>
+      </div>
+      <div class="card-meta">
+        <div class="palette-name">Dune &amp; Sunset<span class="sub">Warm Coastal</span></div>
+        <div class="open">View →</div>
+        <div class="swatches">
+          <span class="sw" style="background:#FCF7F1"></span>
+          <span class="sw" style="background:#6E3B2A"></span>
+          <span class="sw" style="background:#D97742"></span>
+          <span class="sw" style="background:#8A7568"></span>
+        </div>
+      </div>
+    </a>
+
+    <a class="card" href="coastal__dune-sunset__centered-hero.html">
+      <div class="preview-frame">
+        <span class="layout-chip">Centered Hero</span>
+        <iframe src="coastal__dune-sunset__centered-hero.html" loading="lazy" title="Coastal · Dune &amp; Sunset · Centered Hero"></iframe>
+      </div>
+      <div class="card-meta">
+        <div class="palette-name">Dune &amp; Sunset<span class="sub">Warm Coastal</span></div>
+        <div class="open">View →</div>
+        <div class="swatches">
+          <span class="sw" style="background:#FCF7F1"></span>
+          <span class="sw" style="background:#6E3B2A"></span>
+          <span class="sw" style="background:#D97742"></span>
+          <span class="sw" style="background:#8A7568"></span>
+        </div>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+<footer>
+  <div class="fmark">with<b>Notable</b></div>
+  <p>Real estate agent websites built for AI search. Generative Engine Optimization, brokerage-grade design, agent-owned content.</p>
+  <div class="fline">withnotable.ai</div>
+</footer>
+
+</body>
+</html>
