@@ -3,30 +3,25 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>withNotable — Website Themes</title>
-<meta name="description" content="Explore withNotable's website themes and layouts for real estate agents — composable designs that stay distinct across a brokerage.">
-<meta property="og:title" content="withNotable — Website Themes">
-<meta property="og:description" content="Composable real estate agent website themes. Three aesthetics, multiple layouts, infinite differentiation.">
+<title>withNotable — Website Designs</title>
+<meta name="description" content="Preview withNotable's real estate agent website designs — choose your layout and color palette.">
+<meta property="og:title" content="withNotable — Website Designs">
+<meta property="og:description" content="Preview the layout and palette options for your withNotable agent website.">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Source+Sans+3:wght@300;400;500;600&family=Manrope:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Source+Sans+3:wght@300;400;500;600&family=Manrope:wght@300;400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&display=swap" rel="stylesheet">
 <style>
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
   html{scroll-behavior:smooth;}
   body{font-family:'Manrope',sans-serif;background:#dedbd5;color:#1a1614;}
   img{max-width:100%;display:block;}
   a{text-decoration:none;color:inherit;}
-
-  /* ====== PRODUCT HEADER (withNotable brand frame) ====== */
   .ph{background:#1a1614;color:#f5f0eb;padding:16px 24px;display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;}
   .ph .brand{font-family:'Fraunces',serif;font-size:21px;font-weight:500;letter-spacing:.01em;}
   .ph .brand b{font-weight:600;}
   .ph .brand .light{font-weight:300;}
   .ph .ph-right{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#8a857c;}
-  .ph .ph-cta{font-size:12px;letter-spacing:.04em;color:#1a1614;background:#c9a86a;padding:9px 18px;border-radius:3px;font-family:'Manrope',sans-serif;}
-
-  /* ====== CONTROL BAR ====== */
   .ctrl{position:sticky;top:0;z-index:9999;background:#262019;color:#f5f0eb;box-shadow:0 2px 24px rgba(0,0,0,.28);}
   .ctrl-intro{padding:14px 24px 4px;font-family:'Fraunces',serif;font-size:15px;color:#e8d9bf;font-weight:400;}
   .ctrl-rows{display:flex;gap:26px;padding:10px 24px 14px;flex-wrap:wrap;align-items:center;}
@@ -35,51 +30,32 @@
   .opts{display:flex;gap:6px;flex-wrap:wrap;}
   .opt{font-size:12px;padding:7px 14px;border:1px solid #3a352f;border-radius:3px;color:#cfc8bd;cursor:pointer;transition:.18s;background:transparent;font-family:'Manrope',sans-serif;}
   .opt:hover{border-color:#6b655c;color:#f5f0eb;}
-  .opt.active{background:#c9a86a;border-color:#c9a86a;color:#1a1614;font-weight:600;}
-  .opt.lay.active{background:#5b8a9a;border-color:#5b8a9a;color:#fff;}
+  .opt.lay.active{background:#5b8a9a;border-color:#5b8a9a;color:#fff;font-weight:600;}
+  .opt.pal.active{background:#c9a86a;border-color:#c9a86a;color:#1a1614;font-weight:600;}
   .composed{font-size:11px;color:#8a857c;padding:0 24px 12px;letter-spacing:.04em;}
   .composed b{color:#e8d9bf;font-weight:600;}
-
   .note{background:#f5f0eb;border-bottom:1px solid #d8d2c8;padding:13px 24px;font-size:12.5px;color:#6b655c;text-align:center;line-height:1.6;}
   .note b{color:#1a1614;font-weight:600;}
-
   .hs-ph{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:7px;}
   .hs-ph svg{opacity:.45;}
   .hs-ph span{font-size:10px;letter-spacing:.12em;text-transform:uppercase;}
-
-  /* ============================================================
-     THEME TOKENS — each theme is JUST a set of CSS variables.
-     Layouts never hardcode color/font; they read these.
-     ============================================================ */
-  .t-editorial{
-    --font-display:'Cormorant Garamond',Georgia,serif;
-    --font-body:'Source Sans 3',sans-serif;
+  .p-warm{
     --bg:#f5f0eb; --bg-alt:#fdfcfa; --ink:#1a1614; --muted:#7a6e64;
     --accent:#b8956a; --accent-2:#4a6b7a; --line:rgba(184,149,106,.18);
     --hero-grad:linear-gradient(165deg,#f5f0eb,#e8e0d5 60%,#ddd5c8);
-    --radius:4px; --eyebrow-ls:.24em; --display-weight:400; --hero-size:clamp(40px,5.2vw,62px);
     --cta-bg:#3d3530; --cta-fg:#f5f0eb; --dark-sec:#3d3530; --tag-bg:#f5f0eb;
   }
-  .t-modern{
-    --font-display:'Manrope',sans-serif;
-    --font-body:'Manrope',sans-serif;
-    --bg:#ffffff; --bg-alt:#fafafa; --ink:#15130f; --muted:#6b6b6b;
-    --accent:#c2603a; --accent-2:#15130f; --line:#ededed;
-    --hero-grad:#ffffff;
-    --radius:2px; --eyebrow-ls:.26em; --display-weight:600; --hero-size:clamp(42px,5.6vw,66px);
-    --cta-bg:#15130f; --cta-fg:#ffffff; --dark-sec:#15130f; --tag-bg:#f3f3f1;
+  .p-navy{
+    --bg:#f4f6f8; --bg-alt:#ffffff; --ink:#14213d; --muted:#5b6b80;
+    --accent:#c6a961; --accent-2:#1a365d; --line:rgba(198,169,97,.22);
+    --hero-grad:linear-gradient(165deg,#f4f6f8,#e7edf3 60%,#dde6ef);
+    --cta-bg:#1a365d; --cta-fg:#f4f6f8; --dark-sec:#14213d; --tag-bg:#eef2f6;
   }
-  .t-coastal{
-    --font-display:'Outfit',sans-serif;
-    --font-body:'Outfit',sans-serif;
-    --bg:#fbfcfc; --bg-alt:#f1f7f8; --ink:#243b42; --muted:#6b8a91;
-    --accent:#5b9aa8; --accent-2:#2c4a52; --line:#e1edee;
-    --hero-grad:linear-gradient(180deg,#e6f1f2,#fbfcfc 70%);
-    --radius:14px; --eyebrow-ls:.22em; --display-weight:600; --hero-size:clamp(38px,5vw,56px);
-    --cta-bg:#5b9aa8; --cta-fg:#ffffff; --dark-sec:#2c4a52; --tag-bg:#eaf3f4;
+  .site{
+    --font-display:'Cormorant Garamond',Georgia,serif;
+    --font-body:'Source Sans 3',sans-serif;
+    --radius:4px; --eyebrow-ls:.24em; --display-weight:400; --hero-size:clamp(40px,5.2vw,62px);
   }
-
-  /* ====== SHARED SITE CHROME (reads tokens) ====== */
   .site{background:var(--bg);color:var(--ink);font-family:var(--font-body);font-weight:300;}
   .site nav{display:flex;justify-content:space-between;align-items:center;padding:20px 6vw;border-bottom:1px solid var(--line);background:var(--bg-alt);}
   .site .logo{font-family:var(--font-display);font-size:19px;font-weight:500;letter-spacing:.02em;}
@@ -103,20 +79,16 @@
   .site footer{background:var(--ink);color:rgba(245,240,235,.5);padding:38px 6vw;text-align:center;}
   .site footer .fb{font-family:var(--font-display);font-size:18px;color:var(--bg-alt);margin-bottom:8px;}
   .site footer p{font-family:var(--font-body);font-size:12px;line-height:1.8;}
-
   .ab-grid{display:grid;grid-template-columns:1.4fr .6fr;gap:44px;align-items:start;}
   .ab-text p{font-family:var(--font-body);font-size:15px;color:var(--ink);line-height:1.85;margin-bottom:14px;opacity:.85;}
   .statcard{background:var(--bg-alt);border:1px solid var(--line);padding:22px;margin-bottom:14px;border-radius:var(--radius);}
   .statcard .v{font-family:var(--font-display);font-size:36px;font-weight:600;line-height:1;color:var(--ink);}
   .statcard .l{font-family:var(--font-body);font-size:10px;letter-spacing:.12em;color:var(--muted);text-transform:uppercase;margin-top:6px;}
-
   .faq .qa{border-bottom:1px solid var(--line);padding:22px 0;}
   .faq .qa:first-of-type{border-top:1px solid var(--line);}
   .faq .q{font-family:var(--font-display);font-size:21px;font-weight:500;display:flex;justify-content:space-between;}
   .faq .q::after{content:'+';color:var(--accent);font-family:var(--font-body);font-weight:300;}
   .faq .a{font-family:var(--font-body);font-size:14px;color:var(--ink);opacity:.8;line-height:1.7;margin-top:10px;max-width:88%;}
-
-  /* ====== LAYOUTS ====== */
   .layA .hero{padding:64px 6vw 56px;display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center;background:var(--hero-grad);}
   .layA .hero .portrait{position:relative;}
   .layA .hero .hs{width:100%;aspect-ratio:3/4;background:var(--bg-alt);border-radius:var(--radius);box-shadow:0 24px 50px rgba(26,22,20,.13);}
@@ -127,7 +99,6 @@
   .layA .ncard p{font-family:var(--font-body);font-size:14px;color:var(--ink);opacity:.8;line-height:1.7;margin-top:8px;}
   .layA .ncard .tags{display:flex;gap:7px;flex-wrap:wrap;margin-top:14px;padding-top:14px;border-top:1px solid var(--line);}
   .layA .ncard .tag{font-family:var(--font-body);font-size:11px;color:var(--muted);background:var(--tag-bg);padding:5px 12px;border-radius:var(--radius);}
-
   .layB .hero{padding:60px 6vw 56px;text-align:center;background:var(--hero-grad);}
   .layB .hero .hs{width:140px;aspect-ratio:1;border-radius:50%;background:var(--bg-alt);margin:0 auto 22px;}
   .layB .hero h1{max-width:14ch;margin:0 auto;}
@@ -145,7 +116,6 @@
   .layB .faq{max-width:760px;margin:0 auto;}
   .layB .st{text-align:center;}
   .layB .sl{text-align:center;}
-
   @media(max-width:780px){
     .layA .hero{grid-template-columns:1fr;}
     .layB .nbh{grid-template-columns:1fr;}
@@ -156,48 +126,42 @@
 </style>
 </head>
 <body>
-
 <div class="ph">
-  <span class="brand">with<b>Notable</b> <span class="light">· Website Themes</span></span>
-  <span class="ph-right">Product Preview</span>
+  <span class="brand">with<b>Notable</b> <span class="light">· Website Designs</span></span>
+  <span class="ph-right">Design Preview</span>
 </div>
-
 <div class="ctrl">
-  <div class="ctrl-intro">One agent. One set of content. Six distinct sites.</div>
+  <div class="ctrl-intro">Choose your look — pick a layout and a color palette.</div>
   <div class="ctrl-rows">
-    <div class="dial">
-      <span class="dial-label">Theme</span>
-      <div class="opts" id="themeOpts">
-        <button class="opt active" data-theme="editorial" onclick="pickTheme(this)">Editorial</button>
-        <button class="opt" data-theme="modern" onclick="pickTheme(this)">Modern</button>
-        <button class="opt" data-theme="coastal" onclick="pickTheme(this)">Coastal</button>
-      </div>
-    </div>
     <div class="dial">
       <span class="dial-label">Layout</span>
       <div class="opts" id="layoutOpts">
-        <button class="opt lay active" data-layout="A" onclick="pickLayout(this)">A · Split</button>
-        <button class="opt lay" data-layout="B" onclick="pickLayout(this)">B · Centered</button>
+        <button class="opt lay active" data-layout="A" onclick="pickLayout(this)">Split Hero · Stacked Neighborhoods</button>
+        <button class="opt lay" data-layout="B" onclick="pickLayout(this)">Centered Hero · Neighborhood Grid</button>
+      </div>
+    </div>
+    <div class="dial">
+      <span class="dial-label">Palette</span>
+      <div class="opts" id="paletteOpts">
+        <button class="opt pal active" data-pal="warm" onclick="pickPalette(this)">Warm Luxury (Earth &amp; Gold)</button>
+        <button class="opt pal" data-pal="navy" onclick="pickPalette(this)">Navy &amp; Gold (Classic)</button>
       </div>
     </div>
   </div>
-  <div class="composed">Showing: <b id="composedLabel">Editorial theme · Split layout</b></div>
+  <div class="composed">Showing: <b id="composedLabel">Split Hero · Warm Luxury</b></div>
 </div>
-
 <div class="note">
-  The <b>same content</b> rendered through a <b>theme</b> (the feel — fonts, color, density) crossed with a <b>layout</b> (the structure — hero shape, neighborhood pattern). 3 themes × 2 layouts = six looks from two small dials, so every agent in a brokerage stays distinct. Sample agent shown is fictional.
+  These are the <b>website designs you can choose in withNotable</b> — two layouts × two color palettes. The <b>same content</b> recomposes into whichever you pick, so every agent in a brokerage stays distinct. Sample agent shown is fictional.
 </div>
-
 <div id="siteMount"></div>
-
 <script>
 const A = {
-  name:"Morgan Hayes", first:"Morgan", broker:"withNotable Real Estate Group", city:"Your City", state:"",
+  name:"Morgan Hayes", first:"Morgan", broker:"withNotable Real Estate Group",
   phone:"(555) 014-2200", email:"morgan@withnotable.ai",
   hoods:[
     {n:"Old Town", d:"A walkable historic district where character homes meet a thriving local main street.", t:["Historic","Walkable","Character homes"]},
     {n:"Harbor District", d:"Waterfront living with modern builds, marina access, and sunset views.", t:["Waterfront","Modern","Views"]},
-    {n:"The Highlands", d:"Quiet, established streets with mature trees and top-rated neighborhood schools.", t:["Established","Top schools","Family-friendly"]},
+    {n:"The Highlands", d:"Quiet, established streets with mature trees and welcoming neighborhood parks.", t:["Established","Tree-lined","Community"]},
   ],
   faqs:[
     {q:"What areas do you specialize in?", a:"Old Town, the Harbor District, and The Highlands, plus the surrounding metro market."},
@@ -205,115 +169,46 @@ const A = {
     {q:"How do you price a home for sale?", a:"By pairing current market data with hyperlocal knowledge of your specific street and block."},
   ]
 };
-
-const SVG_USER = `<svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>`;
-const SVG_PIN = `<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>`;
-const hsPh = (cls='') => `<div class="hs hs-ph ${cls}">${SVG_USER}<span>Headshot</span></div>`;
-
-function nav(){return `<nav>
-  <span class="logo">${A.name} <span class="div">|</span> <span style="font-size:11px;letter-spacing:.05em;font-weight:400;">${A.broker.toUpperCase()}</span></span>
-  <div class="nl"><span>Home</span><span>About</span><span>Blog</span><span class="idx">View Listings</span><span class="cta">Contact</span></div>
-</nav>`;}
-
-function idxStrip(){return `<div class="idx-strip">
-  <span class="t">Search every listing in the area</span>
-  <span class="b">View Listings →</span>
-</div>`;}
-
-function aboutBlock(){return `<section class="about">
-  <div class="sl">About ${A.first}</div>
-  <h2 class="st">Your local <em>real estate</em> expert</h2>
-  <div class="ab-grid">
-    <div class="ab-text">
-      <p>${A.first} Hayes has spent years guiding buyers and sellers across the metro area and its surrounding communities, known for steady communication and sharp local insight.</p>
-      <p>Whether relocating to the area or selling a long-loved home, ${A.first} brings the same calm, informed, personal approach to every move.</p>
-    </div>
-    <div class="ab-stats">
-      <div class="statcard"><div class="v">10+</div><div class="l">Years Experience</div></div>
-      <div class="statcard"><div class="v">3</div><div class="l">Focus Markets</div></div>
-    </div>
-  </div>
-</section>`;}
-
-function faqBlock(){return `<section class="faq">
-  <div class="sl">Common Questions</div>
-  <h2 class="st">What buyers &amp; sellers <em>ask me</em></h2>
-  ${A.faqs.map(f=>`<div class="qa"><div class="q">${f.q}</div><div class="a">${f.a}</div></div>`).join('')}
-</section>`;}
-
-function footer(){return `<footer>
-  <div class="fb">${A.name} | ${A.broker}</div>
-  <p>${A.phone} · Equal Housing Opportunity</p>
-  <p style="margin-top:6px;font-style:italic;font-size:11px;">Powered by withNotable</p>
-</footer>`;}
-
+const SVG_USER = '<svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>';
+const SVG_PIN = '<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>';
+const hsPh = (cls) => '<div class="hs hs-ph '+(cls||'')+'">'+SVG_USER+'<span>Headshot</span></div>';
+function nav(){return '<nav><span class="logo">'+A.name+' <span class="div">|</span> <span style="font-size:11px;letter-spacing:.05em;font-weight:400;">'+A.broker.toUpperCase()+'</span></span><div class="nl"><span>Home</span><span>About</span><span>Blog</span><span class="idx">View Listings</span><span class="cta">Contact</span></div></nav>';}
+function idxStrip(){return '<div class="idx-strip"><span class="t">Search every listing in the area</span><span class="b">View Listings &rarr;</span></div>';}
+function aboutBlock(){return '<section class="about"><div class="sl">About '+A.first+'</div><h2 class="st">Your local <em>real estate</em> expert</h2><div class="ab-grid"><div class="ab-text"><p>'+A.first+' Hayes has spent years guiding buyers and sellers across the metro area and its surrounding communities, known for steady communication and sharp local insight.</p><p>Whether relocating to the area or selling a long-loved home, '+A.first+' brings the same calm, informed, personal approach to every move.</p></div><div class="ab-stats"><div class="statcard"><div class="v">10+</div><div class="l">Years Experience</div></div><div class="statcard"><div class="v">3</div><div class="l">Focus Markets</div></div></div></div></section>';}
+function faqBlock(){return '<section class="faq"><div class="sl">Common Questions</div><h2 class="st">What buyers &amp; sellers <em>ask me</em></h2>'+A.faqs.map(f=>'<div class="qa"><div class="q">'+f.q+'</div><div class="a">'+f.a+'</div></div>').join('')+'</section>';}
+function footer(){return '<footer><div class="fb">'+A.name+' | '+A.broker+'</div><p>'+A.phone+' · Equal Housing Opportunity</p><p style="margin-top:6px;font-style:italic;font-size:11px;">Powered by withNotable</p></footer>';}
 function layoutA(){
-  return `<div class="site-inner layA">
-    ${nav()}
-    <section class="hero">
-      <div>
-        <div class="eyebrow">${A.broker}</div>
-        <h1>Your guide to <em>home</em></h1>
-        <p class="sub">Helping families find home across the area's most cherished neighborhoods.</p>
-        <div class="btns"><span class="btn">Let's Talk</span></div>
-      </div>
-      <div class="portrait">${hsPh()}</div>
-    </section>
-    ${idxStrip()}
-    ${aboutBlock()}
-    <section>
-      <div class="sl">Local Expertise</div>
-      <h2 class="st">Neighborhoods I know <em>inside &amp; out</em></h2>
-      <div class="nbh">
-        ${A.hoods.map(h=>`<div class="ncard"><h3>${h.n}</h3><p>${h.d}</p><div class="tags">${h.t.map(t=>`<span class="tag">${t}</span>`).join('')}</div></div>`).join('')}
-      </div>
-    </section>
-    ${faqBlock()}
-    ${footer()}
-  </div>`;
+  return '<div class="site-inner layA">'+nav()+
+    '<section class="hero"><div><div class="eyebrow">'+A.broker+'</div><h1>Your guide to <em>home</em></h1><p class="sub">Helping families find home across the area\'s most cherished neighborhoods.</p><div class="btns"><span class="btn">Let\'s Talk</span></div></div><div class="portrait">'+hsPh()+'</div></section>'+
+    idxStrip()+aboutBlock()+
+    '<section><div class="sl">Local Expertise</div><h2 class="st">Neighborhoods I know <em>inside &amp; out</em></h2><div class="nbh">'+
+    A.hoods.map(h=>'<div class="ncard"><h3>'+h.n+'</h3><p>'+h.d+'</p><div class="tags">'+h.t.map(t=>'<span class="tag">'+t+'</span>').join('')+'</div></div>').join('')+
+    '</div></section>'+faqBlock()+footer()+'</div>';
 }
-
 function layoutB(){
-  return `<div class="site-inner layB">
-    ${nav()}
-    <section class="hero">
-      ${hsPh()}
-      <div class="eyebrow">${A.broker}</div>
-      <h1>Find your place to call <em>home</em></h1>
-      <p class="sub">Helping families find home, one neighborhood at a time.</p>
-      <div class="btns"><span class="btn">Start Your Search</span></div>
-    </section>
-    ${idxStrip()}
-    <section>
-      <div class="sl">Local Expertise</div>
-      <h2 class="st">Neighborhoods I serve</h2>
-      <div class="nbh">
-        ${A.hoods.map(h=>`<div class="ncard"><div class="pin">${SVG_PIN}</div><h3>${h.n}</h3><div class="ex">Explore →</div></div>`).join('')}
-      </div>
-    </section>
-    ${aboutBlock()}
-    ${faqBlock()}
-    ${footer()}
-  </div>`;
+  return '<div class="site-inner layB">'+nav()+
+    '<section class="hero">'+hsPh()+'<div class="eyebrow">'+A.broker+'</div><h1>Find your place to call <em>home</em></h1><p class="sub">Helping families find home, one neighborhood at a time.</p><div class="btns"><span class="btn">Start Your Search</span></div></section>'+
+    idxStrip()+
+    '<section><div class="sl">Local Expertise</div><h2 class="st">Neighborhoods I serve</h2><div class="nbh">'+
+    A.hoods.map(h=>'<div class="ncard"><div class="pin">'+SVG_PIN+'</div><h3>'+h.n+'</h3><div class="ex">Explore &rarr;</div></div>').join('')+
+    '</div></section>'+aboutBlock()+faqBlock()+footer()+'</div>';
 }
-
-let curTheme='editorial', curLayout='A';
-const themeNames={editorial:'Editorial',modern:'Modern',coastal:'Coastal'};
-const layoutNames={A:'Split layout',B:'Centered layout'};
-
+let curLayout='A', curPal='warm';
+const layoutNames={A:'Split Hero',B:'Centered Hero'};
+const palNames={warm:'Warm Luxury',navy:'Navy & Gold'};
 function render(){
   const layoutHtml = curLayout==='A' ? layoutA() : layoutB();
-  document.getElementById('siteMount').innerHTML = `<div class="site t-${curTheme}">${layoutHtml}</div>`;
-  document.getElementById('composedLabel').textContent = `${themeNames[curTheme]} theme · ${layoutNames[curLayout]}`;
-}
-function pickTheme(el){
-  curTheme=el.dataset.theme;
-  document.querySelectorAll('#themeOpts .opt').forEach(o=>o.classList.toggle('active',o===el));
-  render();
+  document.getElementById('siteMount').innerHTML = '<div class="site p-'+curPal+'">'+layoutHtml+'</div>';
+  document.getElementById('composedLabel').textContent = layoutNames[curLayout]+' · '+palNames[curPal];
 }
 function pickLayout(el){
   curLayout=el.dataset.layout;
   document.querySelectorAll('#layoutOpts .opt').forEach(o=>o.classList.toggle('active',o===el));
+  render();
+}
+function pickPalette(el){
+  curPal=el.dataset.pal;
+  document.querySelectorAll('#paletteOpts .opt').forEach(o=>o.classList.toggle('active',o===el));
   render();
 }
 render();
